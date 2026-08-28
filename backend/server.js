@@ -94,7 +94,7 @@ app.use(errorHandler);
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`🚀 Surya Stores MERN Server running on port ${PORT}`);
-    console.log(`📡 Client URL: ${allowedOrigin}`);
+    console.log(`📡 Allowed Client URLs: ${clientUrls.join(', ')}`);
   });
 }
 
