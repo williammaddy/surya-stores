@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import logo from "./ast/suryalogo.png"
 import {
   ShoppingBag,
   Search,
@@ -81,24 +82,40 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 sm:h-20 gap-2 sm:gap-4">
           {/* Official Surya Stores Brand Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#dc2626] text-white flex items-center justify-center font-black shadow-xs shrink-0">
-              <span className="text-sm sm:text-base tracking-tighter">SP</span>
-            </div>
-            <div className="min-w-0">
-              <div className="flex items-center gap-1.5">
-                <span className="font-black text-lg sm:text-2xl tracking-tight text-[#dc2626] font-display leading-none">
-                  SURYA STORES
-                </span>
-                <span className="hidden sm:inline-block text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded bg-[#dc2626] text-white">
-                  WHOLESALE &amp; RETAIL
-                </span>
-              </div>
-              <div className="flex items-center gap-1 mt-0.5 text-slate-500">
-                <span className="text-[10px] sm:text-xs font-bold text-slate-700 tamil-font">சூர்யா ஸ்டோர்</span>
-                <span className="text-[8px] sm:text-[9px] uppercase font-bold text-slate-400">• Tiruppur</span>
-              </div>
-            </div>
-          </Link>
+  
+  {/* Logo */}
+  <div className="w-9 h-9 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center">
+    <img
+      src={logo}
+      alt="Surya Stores Logo"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* Store Name */}
+  <div className="min-w-0">
+    <div className="flex items-center gap-1.5">
+      <span className="font-black text-lg sm:text-2xl tracking-tight text-[#dc2626] font-display leading-none">
+        SURYA STORES
+      </span>
+
+      <span className="hidden sm:inline-block text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded bg-[#dc2626] text-white">
+        WHOLESALE &amp; RETAIL
+      </span>
+    </div>
+
+    <div className="flex items-center gap-1 mt-0.5 text-slate-500">
+      <span className="text-[10px] sm:text-xs font-bold text-slate-700 tamil-font">
+        சூர்யா ஸ்டோர்
+      </span>
+
+      <span className="text-[8px] sm:text-[9px] uppercase font-bold text-slate-400">
+        • Tiruppur
+      </span>
+    </div>
+  </div>
+
+</Link>
 
           {/* Desktop Search Bar */}
           <form

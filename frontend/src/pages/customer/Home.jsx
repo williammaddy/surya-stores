@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import image1 from "./assets/shop1.jpeg"
+import image2 from "./assets/shop2.jpeg"
+import image3 from "./assets/shop3.jpeg"
+import image4 from "./assets/shop4.jpeg"
+import image5 from "./assets/shop5.jpeg"
 import {
   ArrowRight,
   Truck,
@@ -183,25 +188,51 @@ const Home = () => {
       {/* 2. BRANDS RIBBON */}
       {/* ========================================================================= */}
       <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-xl border border-slate-200 p-3 sm:p-4 shadow-2xs">
-          <div className="text-center mb-2">
-            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-[#0284c7]">
-              LEADING STATIONERY &amp; BOOK BRANDS
-            </span>
-          </div>
+  <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-2xs">
 
-          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 text-[10px] sm:text-xs font-extrabold text-slate-700">
-            {brandList.slice(0, 10).map((brand) => (
-              <span
-                key={brand}
-                className="px-2.5 py-1 rounded bg-[#f0f9ff] text-[#0369a1] border border-[#bae6fd]"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
+    <div className="text-center mb-4">
+      <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-[#0284c7]">
+        OUR STORE
+      </span>
+    </div>
+
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+      {[
+        image1,
+        image2,
+        image3,
+        image4,
+        image5,
+      ].map((image, index) => (
+        <div
+          key={index}
+          className="
+            w-32 h-24
+            sm:w-40 sm:h-28
+            md:w-48 md:h-32
+            lg:w-52 lg:h-36
+            rounded-xl
+            overflow-hidden
+            border border-slate-200
+            shadow-sm
+            bg-slate-50
+            shrink-0
+            hover:scale-[1.03]
+            hover:shadow-lg
+            transition-all duration-300
+          "
+        >
+          <img
+            src={image}
+            alt={`Surya Stores ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* ========================================================================= */}
       {/* 3. 5-COLUMN TRUST RIBBON */}
@@ -263,30 +294,7 @@ const Home = () => {
       {/* ========================================================================= */}
       {/* 4. SHOP BY CATEGORY */}
       {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between gap-2 mb-4">
-          <div>
-            <span className="text-[9px] font-black uppercase tracking-wider text-[#dc2626] block">
-              STORE DEPARTMENTS
-            </span>
-            <h2 className="text-xl sm:text-3xl font-black text-slate-900 font-display">
-              Shop By Category
-            </h2>
-          </div>
-          <Link
-            to="/products"
-            className="text-xs font-bold text-[#0284c7] hover:text-[#dc2626] flex items-center gap-1 shrink-0"
-          >
-            All <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
-          {categories.map((cat, idx) => (
-            <CategoryCard key={cat._id} category={cat} index={idx} />
-          ))}
-        </div>
-      </section>
+      
 
       {/* ========================================================================= */}
       {/* 5. BEST SELLERS & FEATURED PRODUCTS */}
