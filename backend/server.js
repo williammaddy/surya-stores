@@ -61,7 +61,15 @@ app.use(morgan('dev'));
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true, limit: '5mb' }));
 
-// Healthcheck
+// Root & Healthcheck Routes (for Render and uptime monitoring)
+app.get('/', (req, res) => {
+  res.json({
+    service: 'Surya Stores Production API',
+    status: 'ok',
+    message: 'Surya Stores Backend is running live 🚀',
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
