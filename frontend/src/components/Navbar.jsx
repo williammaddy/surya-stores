@@ -96,7 +96,7 @@ const Navbar = () => {
   <div className="min-w-0">
     <div className="flex items-center gap-1.5">
       <span className="font-black text-lg sm:text-2xl tracking-tight text-[#dc2626] font-display leading-none">
-        SURYA STORES
+        SURYA STORE
       </span>
 
       <span className="hidden sm:inline-block text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded bg-[#dc2626] text-white">

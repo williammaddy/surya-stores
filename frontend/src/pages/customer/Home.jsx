@@ -5,6 +5,7 @@ import image2 from "./assets/shop2.jpeg"
 import image3 from "./assets/shop3.jpeg"
 import image4 from "./assets/shop4.jpeg"
 import image5 from "./assets/shop5.jpeg"
+import Hero from "./assets/Hero.png"
 import {
   ArrowRight,
   Truck,
@@ -174,7 +175,7 @@ const Home = () => {
             <div className="hidden sm:block lg:col-span-5 relative">
               <div className="relative rounded-xl overflow-hidden shadow-xl border-4 border-white aspect-16/10 bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                  src={Hero}
                   alt="Surya Stores Stationery Collection"
                   className="w-full h-full object-cover"
                 />
@@ -345,7 +346,7 @@ const Home = () => {
                 VISIT OUR STORE
               </span>
               <h3 className="text-base font-black text-slate-900 font-display">
-                Surya Stores (சூர்யா ஸ்டோர்)
+                Surya Store (சூர்யா ஸ்டோர்)
               </h3>
               <p className="text-xs text-slate-600 font-medium">
                 17, Kamatchiamman Koil Street, Tiruppur - 641604

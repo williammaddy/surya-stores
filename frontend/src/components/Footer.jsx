@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="font-black text-xl tracking-tight text-white font-display block leading-none">
-                  SURYA STORES
+                  SURYA STORE
                 </span>
                 <span className="text-[10px] uppercase font-bold text-sky-200 block">
                   சூர்யா ஸ்டோர் • Wholesale &amp; Retail
